@@ -13,5 +13,10 @@ gem "lita"
 # gem "lita-google-images"
 # gem "lita-karma"
 # gem 'telegram-bot'
-#gem "lita-telegram"
+# gem "lita-telegram"
 gem 'lita-slack'
+gem 'lita-doubler'
+gem 'lita-whats-brad-eating'
+#gem "lita-cleverbot-demo"
+gem "lita-task-scheduler"
+gem "lita-resistance",path: 'lita-resistance'

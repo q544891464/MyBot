@@ -1,0 +1,24 @@
+
+<%= @starter %> 开启了游戏ID为 #<%= @game_id %> 的抵抗组织游戏。
+
+<% if @member == @spy_specials[:blind_spy] %>
+你是一个盲探，间谍中的一员。不幸的是，你不认识其他间谍，他们也不认识你。
+<% else %>
+<% if @member == @spy_specials[:deep_cover] %>
+你是潜伏者，间谍中的一员。
+<% elsif @member == @spy_specials[:false_commander] %>
+你是假指挥官，间谍中的一员。
+<% elsif @member == @spy_specials[:assassin] %>
+你是刺客，间谍中的一员。
+<% else %>
+你是一名普通间谍。
+<% end %>
+
+<% if @other_spies.length == 1 %>
+  另一位间谍是 @<%= @other_spies[0] %>.
+<% elsif @other_spies.length > 1 %>
+  其他间谍为 @<%= @other_spies.join(' @') %>.
+<% else %>
+  你看不到其他间谍。
+<% end %>
+<% end %>
